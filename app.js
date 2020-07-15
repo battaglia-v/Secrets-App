@@ -10,6 +10,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 const FacebookStrategy = require("passport-facebook").Strategy;
+var MemoryStore = require('memorystore')(session);
 
 const app = express();
 
@@ -21,9 +22,11 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(session({
-  secret: "Our little secret.",
-  resave: false,
-  saveUninitialized: false
+  cookie: { maxAge: 86400000 },
+  store: new MemoryStore({
+    checkPeriod: 86400000
+  }),
+  secret: 'keyboard cat'
 }));
 
 app.use(passport.initialize());
