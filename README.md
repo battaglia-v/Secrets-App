@@ -1,6 +1,6 @@
-# 🕵️‍Secrets-App 
+# 🕵️‍[Secrets-App](https://classique-bastille-78908.herokuapp.com/)
  
-:telescope: Utilizing OAuth 2.0 (Facebook and Google Sign-In) + Passport + EJS templating in a web-app built with express, a Node.js framework. Users can post their *secrets* to the world annonymously....
+:telescope: Utilizing OAuth 2.0 (Facebook and Google Sign-In) + Passport + EJS templating in a web-app built on Node.JS using Express. Users can post their *secrets* to the world anonymously....
  
 #### Login Home
 ![](/secrets-app-img/main-page.png)
