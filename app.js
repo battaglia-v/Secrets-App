@@ -75,7 +75,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:3000/auth/facebook/secrets",
+    callbackURL: "https://classique-bastille-78908.herokuapp.com/auth/facebook/secrets",
     enableProof: true
   },
   function(accessToken, refreshToken, profile, cb) {
@@ -87,7 +87,7 @@ passport.use(new FacebookStrategy({
 ));
 
 app.get("/", function(req, res){
-  res.render("/home");
+  res.render("home");
 });
 
 app.get("/auth/google",
